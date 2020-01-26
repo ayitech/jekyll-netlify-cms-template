@@ -1,0 +1,13 @@
+<!-- One -->
+<section id="{{ include.section.section_id }}" class="wrapper">
+    <div class="inner">
+        <ul class="features">
+            {% for feature in include.section.features %}
+                <li>
+                    <h3{% assign enabled_is_not_empty = feature.icon.enabled | is_not_empty %}{% if enabled_is_not_empty %} class="icon {{ feature.icon.style }} {{ feature.icon.icon }}"{% endif %}>{{ feature.title }}</h3>
+                    {{ feature.description | markdownify }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

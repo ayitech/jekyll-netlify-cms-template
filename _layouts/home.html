@@ -1,0 +1,10 @@
+---
+layout: body
+---
+
+        {% include banner.html %}
+
+        {% for section in page.sections %}
+            
+            {% include {{ section.component }} section=section page=page site=site %}
+        {% endfor %}

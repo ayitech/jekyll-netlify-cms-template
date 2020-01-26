@@ -1,0 +1,13 @@
+<ul>
+    {% for item in include.menu %}
+            <li>
+                <a href="{% assign expr_1 = item.url | starts_with: '#' %}{% if expr_1 %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.identifier == 'layouts' %}class="submenu"{% endif %}>{{ item.title }}</a>
+                {% assign expr_2 = item.children | size %}
+                {% if expr_2 > 0 %}
+                    {% assign menu = item.children %}
+                    
+                    {% include menu.html menu=menu page=page %}
+                {% endif %}
+            </li>
+    {% endfor %}
+</ul>
