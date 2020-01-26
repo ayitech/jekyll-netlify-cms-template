@@ -1,27 +1,27 @@
-title: Archetype
+title: Ayitech Solutions
 baseurl: /
 permalink: '/:title/'
 landing_template: home
-palette: blue
+palette: green
 palettes:
   blue:
     sass:
-      gradient1: '#27a1e3'
-      gradient2: '#e7232a'
       accent1: '#5f9dd2'
       accent2: '#758ce1'
       accent3: '#e286a9'
+      gradient1: '#27a1e3'
+      gradient2: '#e7232a'
   green:
     sass:
-      gradient1: '#16f4cf'
-      gradient2: '#6532e5'
       accent1: '#54d3cf'
       accent2: '#4f92d1'
       accent3: '#8075e5'
+      gradient1: '#16f4cf'
+      gradient2: '#6532e5'
 sass:
   indentWidth: 4
-  style: nested
   precision: 10
+  style: nested
 plugins:
   - jekyll-menus
 exclude:
@@ -38,6 +38,3 @@ exclude:
   - netlify.toml
   - stackbit-build.sh
   - stackbit-pull.js
-collections:
-  posts:
-    permalink: '/posts/:title/'
